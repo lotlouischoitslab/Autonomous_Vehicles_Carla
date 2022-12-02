@@ -3,3 +3,7 @@ All the algorithms I need to know to work with autonomous vehicles. Topics inclu
 
 ## Contributors:
 - ### Louis Sungwoo Cho (조성우)
+
+## Resources:
+- ### [0] [Carla Simulator Documentation](https://carla.readthedocs.io/en/latest/)
+- ### [1] [Carla Simulator Tutorial]()
