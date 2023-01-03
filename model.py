@@ -26,7 +26,22 @@ def load_data(args):
 def build_model(args):
     model = Sequential()
     model.add(Lambda(lambda x: x/127.5-1.0,input=INPUT_SHAPE))
-    model.add(Conv2D(24,5,5,activation='elu'))
-    model.add(Conv2D(24,5,5,activation='elu'))
-    model.add(Conv2D(24,5,5,activation='elu'))
-    model.add(Conv2D(24,5,5,activation='elu'))
+    model.add(Conv2D(24,5,5,activation='elu',strides=(2,2)))
+    model.add(Conv2D(24,5,5,activation='elu',strides=(2,2)))
+    model.add(Conv2D(24,5,5,activation='elu',strides=(2,2)))
+    model.add(Conv2D(24,5,5,activation='elu',strides=(2,2)))
+    model.add(Conv2D(24,5,5,activation='elu',strides=(2,2)))
+
+    model.add(Dropout(args.keep_prob))
+    model.add(flatten())
+
+    model.add(Dense(100,activation='elu')) #first have 100 neurons
+    model.add(Dense(50,activation='elu'))
+    model.add(Dense(10,activation='elu'))
+    model.add(Dense(1))
+    model.summary()
+
+    return model
+
+def train_model(model,args,X_train,X_test,y_train,y_test):
+    pass
