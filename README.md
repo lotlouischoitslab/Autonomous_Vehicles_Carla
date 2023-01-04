@@ -6,6 +6,4 @@ All the algorithms I need to know to work with autonomous vehicles. Topics inclu
 
 ## Resources:
 
-
 ## Instructions
-- **[0] [Docker Environment Setup Tutorial](https://www.youtube.com/watch?v=SnSH8Ht3MIc)**
